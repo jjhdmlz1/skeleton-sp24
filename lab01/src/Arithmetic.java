@@ -1,5 +1,7 @@
 import edu.princeton.cs.algs4.StdIn;
 
+//finished
+
 /** Simple Arithmetic Class.
  * @author Josh Hug
  * */
