@@ -54,6 +54,7 @@ public class Puzzle {
     }
 
     private static boolean isCorrect(int answer) {
+
         return ("" + answer).hashCode() == -32772622;
     }
 

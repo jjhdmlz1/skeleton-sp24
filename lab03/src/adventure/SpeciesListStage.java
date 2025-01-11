@@ -71,6 +71,14 @@ public class SpeciesListStage implements AdventureStage {
         while (true) {
             String input = in.readLine();
             List<String> user;
+
+            if (input == null)
+            {
+                System.out.println("Try again! You got " + 0 + " animals correct!");
+
+                break;
+            }
+
             if (input.isEmpty()) {
                 user = new ArrayList<>();
             } else {
@@ -99,6 +107,15 @@ public class SpeciesListStage implements AdventureStage {
                 copy.remove(o);
             }
         }
-        return similarObjects / listOne.size();
+        if (listOne.size() !=0)
+        {
+            return similarObjects / listOne.size();
+
+        }
+        else
+        {
+            return  0;
+        }
+
     }
 }
