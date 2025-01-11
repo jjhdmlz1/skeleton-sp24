@@ -6,7 +6,8 @@ public class JavaExercises {
     /** Returns an array [1, 2, 3, 4, 5, 6] */
     public static int[] makeDice() {
         // TODO: Fill in this function.
-        return null;
+        int[] array = {1,2,3,4,5,6};
+        return array;
     }
 
     /** Returns the order depending on the customer.
@@ -15,14 +16,44 @@ public class JavaExercises {
      *  In any other case, return an empty String[] of size 3. */
     public static String[] takeOrder(String customer) {
         // TODO: Fill in this function.
-        return null;
+        //String[] strings = new String[3];
+
+        if(customer.equals("Ergun"))
+        {
+            String[] strings = {"beyti","pizza","hamburger","tea"};
+            return strings;
+        }
+        else if (customer.equals("Erik"))
+        {
+            String[] strings = {"sushi", "pasta", "avocado", "coffee"};
+            return strings;
+        }
+        else
+        {
+            String[] strings = new String[3];
+            return strings;
+        }
+
+        //return null;
+
     }
 
     /** Returns the positive difference between the maximum element and minimum element of the given array.
      *  Assumes array is nonempty. */
     public static int findMinMax(int[] array) {
         // TODO: Fill in this function.
-        return 0;
+        int max = array[0];
+        int min = array[0];
+
+        for(int i: array)
+        {
+            if (i>max)
+                max = i;
+            if(i<min)
+                min = i;
+        }
+
+        return max-min;
     }
 
     /**
@@ -39,7 +70,22 @@ public class JavaExercises {
 
     private static List<Integer> hailstoneHelper(int x, List<Integer> list) {
         // TODO: Fill in this function.
-        return null;
+        list.add(x);
+        while (x!=1)
+        {
+            if (x%2 == 0)
+            {
+                x=x/2;
+            }
+            else
+            {
+                x= x*3+1;
+            }
+            list.add(x);
+        }
+
+
+        return list;
     }
 
 }
